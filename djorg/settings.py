@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #Our apps
     'bookmarks',
+    'bootstrap4'
 ]
 
 MIDDLEWARE = [
