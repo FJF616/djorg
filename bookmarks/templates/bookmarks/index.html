@@ -1,8 +1,12 @@
+{% extends "base.html" %}
 {% load bootstrap4 %}
 
-{% bootstrap_css %}
-{% bootstrap_javascript jquery='full' %}
+<!-- {% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %} -->
 
+{% block title %}Djorg - Bookmarks{% endblock %}
+
+{% block content %}
 <h1>Bookmarks</h1>
 {% if bookmarks %}
 <ol>
@@ -22,3 +26,4 @@
     <button type="submit" class="save btn btn-default">Save</button>  
     {% endbuttons %}
 </form>
+{% endblock %}
