@@ -4,4 +4,4 @@ django-bootstrap4==0.0.6
 gunicorn==19.7.1
 pytz==2018.4
 whitenoise==3.3.1
-python==3.6.4
+python==3.7.0b3
