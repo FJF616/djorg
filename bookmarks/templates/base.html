@@ -1,7 +1,9 @@
 {% load bootstrap4 %}
-
+{% load staticfiles %}
 <!DOCTYPE html>
 <head>
+    <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
     <title>{% block title %}Djorg{% endblock %}</title>
     {% bootstrap_css %}
     {% bootstrap_javascript jquery='full' %}
