@@ -10,5 +10,22 @@ python-decouple = "*"
 
 [dev-packages]
 
+[[source]]
+verify_ssl = true
+url = "https://pypi.python.org/simple"
+name = "pypi"
+
+[packages]
+django = "*"
+"django-bootstrap4" = "*"
+gunicorn = "*"
+"psycopg2-binary" = "*"
+dj-database-url = "*"
+python-decouple = "*"
+whitenoise = "*"
+djangorestframework = "*"
+
+[dev-packages]
+
 [requires]
 python_version = "3.6.4"
