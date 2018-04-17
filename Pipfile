@@ -7,7 +7,7 @@ name = "pypi"
 django = "*"
 django-bootstrap4 = "*"
 python-decouple = "*"
-setuptools = "*"
+
 django-heroku = "*"
 
 [dev-packages]
@@ -19,7 +19,6 @@ name = "pypi"
 
 [packages]
 django = "*"
-"django-bootstrap4" = "*"
 gunicorn = "*"
 "psycopg2-binary" = "*"
 dj-database-url = "*"
