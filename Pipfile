@@ -8,6 +8,7 @@ django = "*"
 django-bootstrap4 = "*"
 python-decouple = "*"
 setuptools = "*"
+django-heroku = "*"
 
 [dev-packages]
 
