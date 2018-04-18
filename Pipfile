@@ -10,23 +10,7 @@ python-decouple = "*"
 djangorestframework = "*"
 django-heroku = "*"
 graphene-django = "*"
-graphene = "*"
-
-[dev-packages]
-
-[[source]]
-verify_ssl = true
-url = "https://pypi.python.org/simple"
-name = "pypi"
-
-[packages]
-django = "*"
-gunicorn = "*"
-"psycopg2-binary" = "*"
-dj-database-url = "*"
-python-decouple = "*"
-whitenoise = "*"
-djangorestframework = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 
