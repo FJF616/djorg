@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # 3rd party apps
     'bootstrap4',
+    'graphene_django',
     'rest_framework',
     # Our apps
     'bookmarks',
@@ -82,6 +83,10 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
+}
+
+GRAPHENE = {
+    'SCHEMA': 'notes.schema.schema'
 }
 
 WSGI_APPLICATION = 'djorg.wsgi.application'
@@ -134,7 +139,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/

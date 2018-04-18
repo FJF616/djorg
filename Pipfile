@@ -9,6 +9,8 @@ django-bootstrap4 = "*"
 python-decouple = "*"
 djangorestframework = "*"
 django-heroku = "*"
+graphene-django = "*"
+graphene = "*"
 
 [dev-packages]
 
