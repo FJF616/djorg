@@ -11,6 +11,7 @@ djangorestframework = "*"
 django-heroku = "*"
 graphene-django = "*"
 django-cors-headers = "*"
+django-allauth = "*"
 
 [dev-packages]
 
