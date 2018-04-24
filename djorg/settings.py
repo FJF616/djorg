@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'rest_framework',
     # Our apps
     'bookmarks',
+    'imageuploader.apps.UploaderConfig',
     'notes',
 ]
 
@@ -100,7 +101,10 @@ GRAPHENE = {
 
 WSGI_APPLICATION = 'djorg.wsgi.application'
 
+##for imageuploader see docs https://docs.djangoproject.com/en/dev/ref/settings/#file-upload-settings
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+MEDIA_URL = '/media/'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
