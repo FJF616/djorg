@@ -12,6 +12,7 @@ django-heroku = "*"
 graphene-django = "*"
 django-cors-headers = "*"
 django-allauth = "*"
+nose = "*"
 
 [dev-packages]
 
