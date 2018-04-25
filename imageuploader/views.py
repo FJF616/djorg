@@ -13,4 +13,4 @@ def home(request):
     else:   
         img=UploadForm()
     images=Uploader.objects.all()
-    return render(request, 'home.html', {'form':img, 'images':images})
+    return render(request, 'imageuploader_base.html', {'form':img, 'images':images})
