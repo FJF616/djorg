@@ -9,4 +9,5 @@ class Uploader(models.Model):
 #Form model
 class UploadForm(ModelForm):
     class Meta:
-        model = Uploaderfields = ('pic',)
+        model = Uploader
+        fields = ('pic',)
