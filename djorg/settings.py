@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     'rest_framework',
     # Our apps
     'bookmarks',
-    'imageuploader.apps.UploaderConfig',
+    'imageuploader',
     'notes',
 ]
 
