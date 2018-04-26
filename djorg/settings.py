@@ -55,7 +55,7 @@ INSTALLED_APPS = [
     # Our apps
     'bookmarks',
     'imageuploader',
-    # 'imagestore',
+    'imagestore',
     'notes',
 ]
 
@@ -157,11 +157,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_in_env", "static_root")
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static_in_pro", "our_static"),
+)
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_in_env", "media_root")
+
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Static files (CSS, JavaScript, Images)
@@ -174,3 +178,4 @@ MEDIA_URL = '/media/'
 #     os.path.join(BASE_DIR, 'static'),
 # )
 # django_heroku.settings(locals())
+CRISPY_TEMPLATE_PACK = "bootstrap4"

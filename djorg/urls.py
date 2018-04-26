@@ -19,7 +19,7 @@ from django.views.generic import TemplateView
 from graphene_django.views import GraphQLView
 from rest_framework import routers
 from notes.api import NoteViewSet
-
+from django.contrib.staticfiles import storage
 
 router = routers.DefaultRouter()
 # router.register(r'notes', NoteViewSet)
