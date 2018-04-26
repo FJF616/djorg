@@ -33,4 +33,4 @@ urlpatterns = [
     path('imagestore/', include('imagestore.urls')),
     path('', TemplateView.as_view(template_name='new_base.html')),
     path('', imageuploader_views.home(name='imageuploader_base.html')),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]# ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
