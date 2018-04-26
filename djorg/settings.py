@@ -104,9 +104,7 @@ WSGI_APPLICATION = 'djorg.wsgi.application'
 
 ##for imageuploader see docs https://docs.djangoproject.com/en/dev/ref/settings/#file-upload-settings
 IMAGESTORE_SELF_MANAGE = True
-MEDIA_ROOT = os.path.join(STATIC_ROOT, 'media')
 
-MEDIA_URL = '/media/'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
@@ -160,6 +158,9 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+MEDIA_ROOT = os.path.join(STATIC_ROOT, 'media')
+
+MEDIA_URL = '/media/'
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Static files (CSS, JavaScript, Images)
