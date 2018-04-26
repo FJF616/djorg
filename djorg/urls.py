@@ -19,10 +19,10 @@ from django.views.generic import TemplateView
 from graphene_django.views import GraphQLView
 from rest_framework import routers
 from notes.api import NoteViewSet
-from imageuploader import views as imageuploader_views
+
 
 router = routers.DefaultRouter()
-router.register(r'notes', NoteViewSet)
+# router.register(r'notes', NoteViewSet)
 # router.register(r'posts', PostviewSet)
 # router.register(r'todos', TodoViewSet)
 
@@ -32,7 +32,8 @@ urlpatterns = [
     path('api/', include(router.urls)),
     path('bookmarks/', include('bookmarks.urls')),
     path('graphql/', GraphQLView.as_view(graphiql=True)),
-    # path('imagestore/', include('imagestore.urls')),
     path('', TemplateView.as_view(template_name='new_base.html')),
-    path('', imageuploader_views.home(name='imageuploader_base.html')),
- ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('imageuploader/', include('imageuploader.urls')),
+    
+ ] 
+#  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
