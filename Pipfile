@@ -15,6 +15,7 @@ django-allauth = "*"
 nose = "*"
 pillow = "*"
 imagestore = "*"
+crispy = "*"
 
 [dev-packages]
 
