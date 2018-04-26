@@ -1,5 +1,5 @@
-from myapp.forms import ProfileForm
-from myapp.models import Profile
+from imageuploader.forms import ProfileForm
+from imageuploader.models import Profile
 
 def SaveProfile(request):
    saved = False
