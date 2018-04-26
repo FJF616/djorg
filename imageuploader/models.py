@@ -1,13 +1,8 @@
-# from django.db import models
-# from django.forms import ModelForm
- 
-# # Create your models here.
-# class Uploader(models.Model):
-#     pic = models.ImageField(upload_to="media/")
-#     upload_date = models.DateTimeField(auto_now_add=True)
+from django.db import models
 
-# #Form model
-# class UploadForm(ModelForm):
-#     class Meta:
-#         model = Uploader
-#         fields = ('pic',)
+
+class Post(models.Model):
+    userId = models.IntergerField(default=1)
+    title = models.CharField(default="Default Title", max_length = 200)
+    body = models.TextField(default-"Body of post goes here")
+    picture = models.ImageField(default = "default.png")

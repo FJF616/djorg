@@ -23,6 +23,8 @@ from imageuploader import views as imageuploader_views
 
 router = routers.DefaultRouter()
 router.register(r'notes', NoteViewSet)
+router.register(r'posts', PostviewSet)
+router.register(r'todos', TodoViewSet)
 
 urlpatterns = [
     path('accounts/', include('allauth.urls')),
@@ -33,4 +35,4 @@ urlpatterns = [
     path('imagestore/', include('imagestore.urls')),
     path('', TemplateView.as_view(template_name='new_base.html')),
     path('', imageuploader_views.home(name='imageuploader_base.html')),
-]# ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+ ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

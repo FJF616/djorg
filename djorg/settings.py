@@ -54,7 +54,7 @@ INSTALLED_APPS = [
     # Our apps
     'bookmarks',
     'imageuploader',
-    'imagestore',
+    # 'imagestore',
     'notes',
 ]
 
@@ -104,7 +104,7 @@ WSGI_APPLICATION = 'djorg.wsgi.application'
 
 ##for imageuploader see docs https://docs.djangoproject.com/en/dev/ref/settings/#file-upload-settings
 IMAGESTORE_SELF_MANAGE = True
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(STATIC_ROOT, 'media')
 
 MEDIA_URL = '/media/'
 # Database
@@ -158,7 +158,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
