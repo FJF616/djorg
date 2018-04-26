@@ -22,7 +22,7 @@ from notes.api import NoteViewSet
 from django.contrib.staticfiles import storage
 
 router = routers.DefaultRouter()
-# router.register(r'notes', NoteViewSet)
+router.register(r'notes', NoteViewSet)
 # router.register(r'posts', PostviewSet)
 # router.register(r'todos', TodoViewSet)
 

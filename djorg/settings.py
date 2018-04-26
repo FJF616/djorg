@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.github',
     'bootstrap4',
     'corsheaders',
-    # 'pillow',
+    'pillow',
     'graphene_django',
     'rest_framework',
     # Our apps
