@@ -23,8 +23,8 @@ from imageuploader import views as imageuploader_views
 
 router = routers.DefaultRouter()
 router.register(r'notes', NoteViewSet)
-router.register(r'posts', PostviewSet)
-router.register(r'todos', TodoViewSet)
+# router.register(r'posts', PostviewSet)
+# router.register(r'todos', TodoViewSet)
 
 urlpatterns = [
     path('accounts/', include('allauth.urls')),
