@@ -2,7 +2,7 @@ from django.shortcuts import render
 from imageuploader.models import Uploader, UploadForm
 from django.http import HttpResponseRedirectfrom 
 from django.urls import reverse
-
+from .models import UploadForm, Uploader
 # Create your views here.
 def home(request):
     if request.method=="POST":
@@ -13,4 +13,4 @@ def home(request):
     else:   
         img=UploadForm()
     images=Uploader.objects.all()
-    return render(request, 'imageuploader_base.html', {'form':img, 'images':images})
+    return render(request, 'base.html', {'form':img, 'images':images})
