@@ -13,6 +13,8 @@ graphene-django = "*"
 django-cors-headers = "*"
 django-allauth = "*"
 nose = "*"
+pillow = "*"
+imagestore = "*"
 
 [dev-packages]
 

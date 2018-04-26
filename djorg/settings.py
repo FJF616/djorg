@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     # Our apps
     'bookmarks',
     'imageuploader',
+    'imagestore',
     'notes',
 ]
 
@@ -102,6 +103,7 @@ GRAPHENE = {
 WSGI_APPLICATION = 'djorg.wsgi.application'
 
 ##for imageuploader see docs https://docs.djangoproject.com/en/dev/ref/settings/#file-upload-settings
+IMAGESTORE_SELF_MANAGE = True
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'
