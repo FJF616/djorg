@@ -23,17 +23,19 @@ from django.contrib.staticfiles import storage
 
 router = routers.DefaultRouter()
 router.register(r'notes', NoteViewSet)
+# router.register(r'graphiql', GraphQLView)
 # router.register(r'posts', PostviewSet)
 # router.register(r'todos', TodoViewSet)
 
 urlpatterns = [
+    path('accounts/', include('imageuploader.urls')),
     path('accounts/', include('allauth.urls')),
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
     path('bookmarks/', include('bookmarks.urls')),
     path('graphql/', GraphQLView.as_view(graphiql=True)),
-    path('', TemplateView.as_view(template_name='new_base.html')),
     path('imageuploader/', include('imageuploader.urls')),
-    
- ] 
-#  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('', TemplateView.as_view(template_name='new_base.html')),
+   
+ ]
+#  +  static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

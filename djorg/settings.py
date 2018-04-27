@@ -49,16 +49,16 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.github',
     'bootstrap4',
     'corsheaders',
-    'pillow',
+    # 'pillow',
     'graphene_django',
     'rest_framework',
     # Our apps
     'bookmarks',
     'imageuploader',
-    'imagestore',
+    # 'imagestore',
     'notes',
 ]
-
+AUTH_USER_MODULE = 'imageuploader.Profile'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'corsheaders.middleware.CorsMiddleware',
@@ -84,6 +84,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -164,7 +165,7 @@ STATICFILES_DIRS = (
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_in_env", "media_root")
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
